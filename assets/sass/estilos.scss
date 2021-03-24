@@ -1,0 +1,65 @@
+
+@import '_herencia.scss';
+@import '_mixin.scss';
+
+$color-primario: #FCFCFC;
+$color-secundario: #000;
+$color-root: #1e2126;
+
+
+:root{
+ color: $color-root; 
+ --dark: #16191e;
+ --dark-x:#1e2126;
+}
+.back{
+	background-color: var(--dark);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.contenedor{
+	width: 60%;
+	border-radius: 10px;
+	padding: 50px;
+	text-align: center;
+	margin: 50px auto;
+	align-items: center;
+	box-shadow: 0px 0px 50px rgba(19, 14, 14, 0.1);
+	border: solid 1px #00a0a0;
+	background: rgba(12, 12, 12, 0.705);
+
+	.boton{
+	background: #000046;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0px 0px 10px rgba(11, 14, 14, 0.849);
+	width: 120px;
+	height: 45px;
+	color: whitesmoke;
+	border-color: #2CEADE;
+	font-size: 20px;
+	@include jumbo();
+	@include exgrande();
+	@include grande();
+	@include chico();
+	@include peque();
+  }
+}
+
+
+
+h1 {
+	text-shadow: 5px 5px 10px rgb(12, 196, 196);
+	color: $color-primario;
+	font-size: 50px;
+	margin: 80px;
+	text-align: center;
+	@include h(5px 5px 10px rgb(12, 196, 196),$color_h1, 45px, 60px, center, 1999px, 960px);
+	@include h(5px 5px 10px rgba(147, 35, 233, 0.993),$color_h1, 40px, 60px, center, 959px, 859px);
+	@include h(8px 8px 10px rgba(60, 0, 138, 0.664),$color_h1, 35px, 60px, center, 858px, 480px);
+	@include h(5px 5px 10px rgba(12, 196, 196, 0.774),$color_h1, 30px, 60px, center, 479px, 200px);
+}
